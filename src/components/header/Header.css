@@ -50,7 +50,7 @@ header .presentation::after {
 header .presentation::before {
   content: 'La preturi mici';
   position: absolute;
-  top: 250px;
+  top: 280px;
   left: 50px;
   width: 300px;
   font-size: 15px;
