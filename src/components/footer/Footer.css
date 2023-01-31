@@ -1,0 +1,91 @@
+.footer {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.footer-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-list li {
+  margin: 0 20px;
+}
+
+.footer-list a {
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 200ms ease-in
+}
+
+.footer-list a:hover {
+  color:#aaa;
+}
+
+.social-links {
+  display: flex;
+  margin: 20px 0;
+}
+
+.social-links a {
+  color: #fff;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 40px;
+  transition: all 500ms ease;
+  margin-right: 30px;
+}
+
+.social-links a:last-child {
+  margin-right: 0;
+}
+
+.social-links a:hover {
+  transform: scale(1.5);
+}
+
+.uil-facebook {
+  transition: color 500ms ease;
+}
+
+.social-links a .uil-facebook:hover {
+  color: rgb(0, 106, 255);
+}
+
+.uil-twitter {
+  transition: color 500ms ease;
+}
+
+.social-links a .uil-twitter:hover {
+  color: rgb(53, 189, 235);
+}
+
+.uil-instagram-alt {
+  transition: color 500ms ease;
+}
+
+.social-links a .uil-instagram-alt:hover {
+  color: rgb(215, 50, 130);
+}
+
+.uil-linkedin {
+  transition: color 500ms ease;
+}
+
+.social-links a .uil-linkedin:hover {
+  color: rgb(0, 162, 225);
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #aaa;
+}
