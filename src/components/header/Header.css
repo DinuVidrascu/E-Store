@@ -1,0 +1,120 @@
+header {
+  position: relative;
+}
+
+header .logo {
+  font-weight: 600;
+  font-size: 30px;
+  color: #ca5252;
+}
+
+header ul.nav {
+  float: right;
+  list-style: none;
+
+}
+
+header ul.nav li {
+  display: inline;
+  margin-left: 25px;
+  cursor: pointer;
+  transition: opacity 500ms ease;
+}
+
+header ul.nav li:hover {
+  opacity: 0.5;
+}
+
+header .presentation {
+  margin: 50px 0;
+  background: url('../../img/bg.jpeg') no-repeat;
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center center;
+  background-blend-mode: multiply;
+  background-color: #b0b0b0;
+  position: relative;
+}
+
+header .presentation::after {
+  content: 'The best products for the home';
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  width: 300px;
+  font-size: 40px;
+  font-weight: 600;
+  color: white;
+}
+
+header .presentation::before {
+  content: 'At low prices';
+  position: absolute;
+  top: 280px;
+  left: 50px;
+  width: 300px;
+  font-size: 15px;
+  font-weight: 300;
+  color: white;
+}
+
+.shop-cart-button {
+  float: right;
+  cursor: pointer;
+  transition: color, transition, 500ms ease;
+}
+
+.shop-cart-button:hover,
+.shop-cart-button.active {
+  color: #dc3d3d;
+  transform: scale(1.5);
+}
+
+.shop-cart {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 450px;
+  background: #e7e7e7;
+  -webkit-box-shadow: 4px 5px 15px -7px #606060;
+  box-shadow: 4px 5px 15px -7px #606060;
+  z-index: 1000;
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+.shop-cart .item {
+  width: 100%;
+  float: left;
+  margin-bottom: 20px;
+}
+
+.shop-cart .empty h2{
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.shop-cart .item img {
+  width: 70px;
+  float: left;
+  margin-right: 20px;
+}
+
+.shop-cart .item h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.shop-cart .item p {
+  color: #797979;
+  font-weight: 600;
+}
+
+.summa {
+  float: left;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
