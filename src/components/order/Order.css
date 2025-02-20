@@ -1,0 +1,13 @@
+.delete-icon {
+  color: #ca5252;
+  float: right;
+  position: relative;
+  top: -25px;
+  cursor: pointer;
+  transition: color, transform 500ms ease;
+}
+
+.delete-icon:hover {
+  color: #d83030;
+  transform: scale(1.5);
+}
