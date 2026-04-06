@@ -1,27 +1,37 @@
 import React, { Component } from "react";
-import {HiX} from 'react-icons/hi';
-
+import { HiX } from 'react-icons/hi';
 import "./ShowFullItem.css";
 
 export class ShowFullItem extends Component {
    render() {
+      const { item, onShowItem, onAdd } = this.props;
       return (
-         <div className="fullitem">
-            <div>
-               <HiX className='remove' onClick={() => this.props.onShowItem(this.props.item)}/>
-               <img
-                  src={"./img/" + this.props.item.img}
-                  alt="img"
-                  onClick={() => this.props.onShowItem(this.props.item)}
-               />
-               <h2>{this.props.item.title}</h2>
-               <p>{this.props.item.desc}</p>
-               <b>{this.props.item.price}$</b>
-               <div
-                  className="add-to-cart"
-                  onClick={() => this.props.onAdd(this.props.item)}
-               >
-                  +
+         <div className="full-item-overlay fade-in">
+            <div className="full-item-modal">
+               <div className="close-modal" onClick={() => onShowItem(item)}>
+                  <HiX />
+               </div>
+               
+               <div className="img-side">
+                  <img
+                     src={"/img/" + item.img}
+                     alt={item.title}
+                  />
+               </div>
+               
+               <div className="content-side">
+                  <h2>{item.title}</h2>
+                  <p>{item.desc}</p>
+                  <b>{new Intl.NumberFormat().format(item.price)}</b>
+                  <button
+                     className="add-to-cart-btn"
+                     onClick={() => {
+                        onAdd(item);
+                        onShowItem(item);
+                     }}
+                  >
+                     Add to Basket
+                  </button>
                </div>
             </div>
          </div>

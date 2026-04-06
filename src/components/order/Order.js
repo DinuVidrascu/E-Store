@@ -1,17 +1,30 @@
 import React, { Component } from "react";
-import {FaTrash} from 'react-icons/fa';
-
+import { FaTrash } from 'react-icons/fa';
 import "./Order.css";
 
 export class Order extends Component {
    render() {
+      const { item, onDelete } = this.props;
       return (
-         <div className="item">
-            <img src={"./img/" + this.props.item.img} alt="img" />
-            <h2>{this.props.item.title}</h2>
-            <p>{this.props.item.desc}</p>
-            <b>{this.props.item.price}$</b>
-            <FaTrash className='delete-icon' onClick={()=>this.props.onDelete(this.props.item.id)}/>
+         <div className="cart-item fade-in">
+            <img src={"/img/" + item.img} alt={item.title} />
+            <div className="item-info">
+               <h2>{item.title}</h2>
+               <div className="qty-controls">
+                  <button onClick={() => this.props.onQuantityChange(item.id, -1)}>-</button>
+                  <span>{item.qty || 1}</span>
+                  <button onClick={() => this.props.onQuantityChange(item.id, 1)}>+</button>
+               </div>
+               <p className="item-total-price">
+                  {new Intl.NumberFormat().format(item.price * (item.qty || 1))}$
+               </p>
+            </div>
+            <div className="delete-container">
+               <FaTrash 
+                  className='delete-icon' 
+                  onClick={() => onDelete(item.id)}
+               />
+            </div>
          </div>
       );
    }
